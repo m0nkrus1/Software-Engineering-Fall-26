@@ -1,0 +1,21 @@
+:root{--bg:#f6f7f9;--card:#fff;--fg:#1c2330;--muted:#5b6678;--ok:#13795b;--okbg:#e3f4ee;--bad:#b42318;--badbg:#fdeceb;--warn:#8a5a00;--warnbg:#fff4dc;--line:#d9dee7;--accent:#1f4fd8}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12161d;--card:#1b212b;--fg:#e8ecf2;--muted:#9aa5b8;--ok:#5fd3a8;--okbg:#12332a;--bad:#ff8a80;--badbg:#3a1a18;--warn:#f2c46b;--warnbg:#3a2d10;--line:#2c3544;--accent:#7aa2ff}}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+main{max-width:640px;margin:0 auto;padding:16px}
+h1{font-size:1.35rem;margin:8px 0 4px}h2{font-size:1rem;margin:0 0 8px}
+p.sub{margin:0 0 16px;color:var(--muted);font-size:.9rem}
+section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px}
+label{display:block;font-size:.85rem;color:var(--muted);margin:10px 0 4px}
+input[type=datetime-local],input[type=text]{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);font-size:1rem}
+.row{display:flex;gap:12px;flex-wrap:wrap}.row>div{flex:1;min-width:140px}
+.chk{display:flex;align-items:center;gap:8px;margin-top:12px;color:var(--fg);font-size:.95rem}
+button{margin-top:14px;width:100%;padding:12px;border:0;border-radius:8px;background:var(--accent);color:#fff;font-size:1rem;font-weight:600;cursor:pointer}
+#result{margin-top:14px;padding:12px;border-radius:8px;font-weight:600;display:none}
+#result.ok{display:block;background:var(--okbg);color:var(--ok)}
+#result.bad{display:block;background:var(--badbg);color:var(--bad)}
+#result.warn{display:block;background:var(--warnbg);color:var(--warn)}
+#result small{display:block;font-weight:400;opacity:.85;margin-top:4px}
+ul{margin:0;padding-left:20px}li{margin:4px 0}
+.tablewrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.85rem}th,td{border-bottom:1px solid var(--line);padding:6px;text-align:left;white-space:nowrap}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Smart Campus Room Checker (code-based)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Smart Campus Room Availability</h1>
+<p class="sub">Code-based track. Fictional data only.</p>
+<section>
+<h2 id="room"></h2>
+<ul id="bookings"></ul>
+</section>
+<section>
+<div class="row">
+<div><label for="start">Start time</label><input id="start" type="datetime-local"></div>
+<div><label for="duration">Duration (minutes, 1-120)</label><input id="duration" type="text" inputmode="numeric" autocomplete="off"></div>
+</div>
+<label class="chk"><input id="blocked" type="checkbox"> Room is blocked</label>
+<label for="now">Current time (fixed for reproducible tests)</label>
+<input id="now" type="datetime-local">
+<button id="check" type="button">Check availability</button>
+<div id="result" role="status" aria-live="polite"></div>
+</section>
+</main>
+<script src="engine.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
